@@ -5,7 +5,7 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.chunk.ChunkGeneratorStructureState;
 import net.minecraft.world.level.levelgen.structure.StructureSet;
-import net.ndisclose.removal_mod.Structure.StructureBlacklist;
+import net.ndisclose.removal_mod.StructureFeature.StructureBlacklist;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -29,8 +29,6 @@ public abstract class StructureRemoval {
                         Optional<ResourceKey<Structure>> key = entry.structure().unwrapKey();
                         if (key.isPresent() && StructureBlacklist.structure_blacklist.contains(
                                 key.get().identifier())) {
-            System.out.println("Removing structure set containing: "
-                                + key.get().identifier());
                         return false;
                         }
                     }

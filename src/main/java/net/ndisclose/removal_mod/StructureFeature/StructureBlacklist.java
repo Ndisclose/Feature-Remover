@@ -1,4 +1,4 @@
-package net.ndisclose.removal_mod.Structure;
+package net.ndisclose.removal_mod.StructureFeature;
 
 import net.minecraft.resources.Identifier;
 
