@@ -5,7 +5,8 @@
 	"mixins": [
         "CraftingMenuMixin",
         "StructuresFeatures.StructureRemoval",
-        "StructuresFeatures.FeatureRemoval"
+        "StructuresFeatures.FeatureRemoval",
+        "BiomeRemoval"
 	],
 	"injectors": {
 		"defaultRequire": 1
