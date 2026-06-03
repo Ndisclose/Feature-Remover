@@ -3,6 +3,7 @@ package net.ndisclose.removal_mod.item;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.ndisclose.removal_mod.Blacklists;
 
 public class SanitizeItemStack {
     public static ItemStack sanitizeStack(ItemStack stack) {
@@ -10,7 +11,7 @@ public class SanitizeItemStack {
             return new ItemStack(Items.BOOK, stack.getCount());
         }
 
-        if (ItemBlacklist.item_blacklist.contains(stack.getItem())) {
+        if (Blacklists.ITEM_BLACKLIST.contains(stack.getItem())) {
             return ItemStack.EMPTY;
         }
 

@@ -3,7 +3,7 @@ package net.ndisclose.removal_mod.mixin;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Climate;
-import net.ndisclose.removal_mod.BiomeBlacklist;
+import net.ndisclose.removal_mod.Blacklists;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -29,7 +29,7 @@ public abstract class BiomeRemoval {
                             }
                             return holder.unwrapKey()
                                     .map(key ->
-                                            !BiomeBlacklist.biome_blacklist.contains(
+                                            !Blacklists.BIOME_BLACKLIST.contains(
                                                     key.identifier()
                                             )
                                     )

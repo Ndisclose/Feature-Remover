@@ -2,6 +2,7 @@ package net.ndisclose.removal_mod.item;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.world.item.ItemStack;
+import net.ndisclose.removal_mod.Blacklists;
 
 public class InventorySanitization {
     public static void initialize() {
@@ -9,8 +10,8 @@ public class InventorySanitization {
             server.getPlayerList().getPlayers().forEach(player -> {
                 for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
                     ItemStack stack = player.getInventory().getItem(i);
-                    if (ItemBlacklist.item_blacklist.contains(stack.getItem()) || stack.isEnchanted()) {
-                        player.getInventory().setItem(i, ItemStack.EMPTY);
+                    if (Blacklists.ITEM_BLACKLIST.contains(stack.getItem()) || stack.isEnchanted()) {
+                        player.getInventory().setItem(i, SanitizeItemStack.sanitizeStack(stack));
                     }
                 }
             });

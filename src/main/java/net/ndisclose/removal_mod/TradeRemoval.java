@@ -1,12 +1,9 @@
-package net.ndisclose.removal_mod.trade;
+package net.ndisclose.removal_mod;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.npc.villager.AbstractVillager;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
-import net.ndisclose.removal_mod.item.ItemBlacklist;
 import net.ndisclose.removal_mod.item.SanitizeItemStack;
 
 public class TradeRemoval {

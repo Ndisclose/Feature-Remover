@@ -2,8 +2,6 @@ package net.ndisclose.removal_mod;
 
 import net.fabricmc.api.ModInitializer;
 import net.ndisclose.removal_mod.item.*;
-import net.ndisclose.removal_mod.mob.EntityRemoval;
-import net.ndisclose.removal_mod.trade.TradeRemoval;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

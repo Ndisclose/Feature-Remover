@@ -1,10 +1,10 @@
-package net.ndisclose.removal_mod.mixin.StructuresFeatures;
+package net.ndisclose.removal_mod.mixin;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.ndisclose.removal_mod.StructureFeature.FeatureBlacklist;
+import net.ndisclose.removal_mod.Blacklists;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -28,7 +28,7 @@ public class FeatureRemoval {
                     List<Holder<PlacedFeature>> kept = step.stream()
                             .filter(featureHolder ->
                                     featureHolder.unwrapKey()
-                                            .map(key -> !FeatureBlacklist.feature_blacklist.contains(key.identifier()))
+                                            .map(key -> !Blacklists.FEATURE_BLACKLIST.contains(key.identifier()))
                                             .orElse(true)
                             )
                             .toList();

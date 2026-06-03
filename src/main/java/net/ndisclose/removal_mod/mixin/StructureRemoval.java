@@ -1,11 +1,11 @@
-package net.ndisclose.removal_mod.mixin.StructuresFeatures;
+package net.ndisclose.removal_mod.mixin;
 
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.chunk.ChunkGeneratorStructureState;
 import net.minecraft.world.level.levelgen.structure.StructureSet;
-import net.ndisclose.removal_mod.StructureFeature.StructureBlacklist;
+import net.ndisclose.removal_mod.Blacklists;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -27,7 +27,7 @@ public abstract class StructureRemoval {
                     for (StructureSet.StructureSelectionEntry entry : set.structures()) {
 
                         Optional<ResourceKey<Structure>> key = entry.structure().unwrapKey();
-                        if (key.isPresent() && StructureBlacklist.structure_blacklist.contains(
+                        if (key.isPresent() && Blacklists.STRUCTURE_BLACKLIST.contains(
                                 key.get().identifier())) {
                         return false;
                         }

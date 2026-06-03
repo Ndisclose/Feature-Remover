@@ -1,12 +1,71 @@
-package net.ndisclose.removal_mod.item;
+package net.ndisclose.removal_mod;
 
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
-public class ItemBlacklist {
-    public static final Set<Item> item_blacklist = Set.of(
+public class Blacklists {
+
+    public static final Set<Identifier> FEATURE_BLACKLIST = Set.of(
+                Identifier.parse("minecraft:monster_room"),
+                Identifier.parse("minecraft:monster_room_deep")
+        );
+
+        public static final Set<EntityType<?>> ENTITY_BLACKLIST = Set.of(
+            EntityType.ALLAY,
+            EntityType.BLAZE,
+            EntityType.BOGGED,
+            EntityType.BREEZE,
+            EntityType.CAVE_SPIDER,
+            EntityType.ZOMBIE_NAUTILUS,
+            EntityType.CREEPER,
+            EntityType.DROWNED,
+            EntityType.ELDER_GUARDIAN,
+            EntityType.ENDERMAN,
+            EntityType.ENDERMITE,
+            EntityType.ENDER_DRAGON,
+            EntityType.EVOKER,
+            EntityType.GHAST,
+            EntityType.GIANT,
+            EntityType.GUARDIAN,
+            EntityType.HOGLIN,
+            EntityType.HUSK,
+            EntityType.MAGMA_CUBE,
+            EntityType.PHANTOM,
+            EntityType.PIGLIN,
+            EntityType.PIGLIN_BRUTE,
+            EntityType.PILLAGER,
+            EntityType.RAVAGER,
+            EntityType.SHULKER,
+            EntityType.SILVERFISH,
+            EntityType.SKELETON,
+            EntityType.SKELETON_HORSE,
+            EntityType.SLIME,
+            EntityType.SPIDER,
+            EntityType.STRAY,
+            EntityType.STRIDER,
+            EntityType.VEX,
+            EntityType.VINDICATOR,
+            EntityType.WARDEN,
+            EntityType.WITCH,
+            EntityType.WITHER,
+            EntityType.WITHER_SKELETON,
+            EntityType.ZOGLIN,
+            EntityType.ZOMBIE,
+            EntityType.ZOMBIE_HORSE,
+            EntityType.ZOMBIE_VILLAGER,
+            EntityType.ZOMBIFIED_PIGLIN,
+            EntityType.ILLUSIONER,
+            EntityType.CREAKING,
+            EntityType.SNIFFER
+    );
+    public static final Set<Item> ITEM_BLACKLIST = Set.of(
             Items.ENCHANTED_BOOK,
             Items.POTION,
             Items.SPLASH_POTION,
@@ -35,7 +94,6 @@ public class ItemBlacklist {
             Items.END_CRYSTAL,
             Items.NETHER_STAR,
             Items.BEACON,
-            Items.ZOMBIE_HEAD,
             Items.ZOMBIE_NAUTILUS_SPAWN_EGG,
             Items.CONDUIT,
             Items.HEART_OF_THE_SEA,
@@ -65,19 +123,6 @@ public class ItemBlacklist {
             Items.OMINOUS_TRIAL_KEY,
             Items.TRIAL_KEY,
             Items.SPAWNER,
-            Items.SOUL_LANTERN,
-            Items.SOUL_TORCH,
-            Items.SOUL_CAMPFIRE,
-            Items.WITHER_ROSE,
-            Items.SOUL_SAND,
-            Items.SOUL_SOIL,
-            Items.NETHERRACK,
-            Items.WITHER_SKELETON_SKULL,
-            Items.SKELETON_SKULL,
-            Items.PLAYER_HEAD,
-            Items.CREEPER_HEAD,
-            Items.PIGLIN_HEAD,
-            Items.DRAGON_HEAD,
             Items.ALLAY_SPAWN_EGG,
             Items.BLAZE_SPAWN_EGG,
             Items.BOGGED_SPAWN_EGG,
@@ -129,6 +174,30 @@ public class ItemBlacklist {
             Items.SKULL_POTTERY_SHERD,
             Items.SCULK,
             Items.SCULK_VEIN,
-            Items.CARVED_PUMPKIN
+            Items.CARVED_PUMPKIN,
+            Items.WITHER_ROSE,
+            Items.ZOMBIE_HEAD,
+            Items.SKELETON_SKULL,
+            Items.WITHER_SKELETON_SKULL,
+            Items.PLAYER_HEAD,
+            Items.CREEPER_HEAD,
+            Items.PIGLIN_HEAD,
+            Items.DRAGON_HEAD,
+            Items.SOUL_SAND,
+            Items.SOUL_SOIL,
+            Items.SOUL_TORCH,
+            Items.SOUL_LANTERN,
+            Items.SOUL_CAMPFIRE,
+            Items.NETHERRACK
     );
+    public static final Set<Identifier> BIOME_BLACKLIST = Set.of(
+            Identifier.parse("minecraft:deep_dark")
+    );
+    public static final Set<Identifier> STRUCTURE_BLACKLIST = Set.of(
+            Identifier.parse("minecraft:ruined_portal"),
+            Identifier.parse("minecraft:swamp_hut"),
+            Identifier.parse("minecraft:mansion")
+    );
+    public static final Set<Block> BLOCK_BLACKLIST = ITEM_BLACKLIST.stream().map(item -> Block.byItem(item)).filter(block -> block != Blocks.AIR).collect(Collectors.toSet());
+
 }

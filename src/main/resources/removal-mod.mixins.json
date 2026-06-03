@@ -4,9 +4,13 @@
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
         "CraftingMenuMixin",
-        "StructuresFeatures.StructureRemoval",
-        "StructuresFeatures.FeatureRemoval",
-        "BiomeRemoval"
+      "StructureRemoval",
+      "FeatureRemoval",
+        "BiomeRemoval",
+        "BlockRemoval",
+        "NetherPortalRemoval",
+        "UseItemGoalAccessor",
+        "RemoveEntityUsageOfBlacklistedItems"
 	],
 	"injectors": {
 		"defaultRequire": 1
