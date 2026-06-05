@@ -40,7 +40,7 @@ public class ModPlacedFeatures {
                         );
 
         context.register(OverworldObtainableOres.OVERWORLD_NETHERITE_PLACED, new PlacedFeature(
-                        overworldQuartzVein,
+                        overworldAncientDebrisVein,
                         List.of(
                                 CountPlacement.of(3),
                                 InSquarePlacement.spread(),
