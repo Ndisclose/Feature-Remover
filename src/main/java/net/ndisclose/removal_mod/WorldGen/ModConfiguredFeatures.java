@@ -22,7 +22,8 @@ public class ModConfiguredFeatures {
                 new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES),
                 Blocks.ANCIENT_DEBRIS.defaultBlockState(),
                 3
-        );
+                );
+        context.register(OverworldObtainableOres.OVERWORLD_BASALT, new ConfiguredFeature<>(ModFeatures.LAVA_BASALT, NoneFeatureConfiguration.INSTANCE));
         context.register(OverworldObtainableOres.OVERWORLD_QUARTZ, new ConfiguredFeature<>(Feature.ORE, quartzConfig));
         context.register(OverworldObtainableOres.OVERWORLD_NETHERITE, new ConfiguredFeature<>(Feature.ORE, nethriteConfig));
     }

@@ -16,5 +16,10 @@ public class OverWorldOreGeneration {
                 GenerationStep.Decoration.UNDERGROUND_ORES,
                 OverworldObtainableOres.OVERWORLD_NETHERITE_PLACED
         );
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Decoration.UNDERGROUND_ORES,
+                OverworldObtainableOres.OVERWORLD_BASALT_PLACED
+        );
     }
 }

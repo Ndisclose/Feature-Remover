@@ -1,7 +1,7 @@
 package net.ndisclose.removal_mod;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.ndisclose.removal_mod.WorldGen.ModFeatures;
 import net.ndisclose.removal_mod.WorldGen.OverWorldOreGeneration;
 import net.ndisclose.removal_mod.Removal.EntityRemoval;
 import net.ndisclose.removal_mod.Removal.TradeRemoval;
@@ -27,6 +27,7 @@ public class RemovalMod implements ModInitializer {
         InventorySanitization.initialize();
         CreativeMenuSanitization.initialize();
         TradeRemoval.initialize();
+        ModFeatures.initialize();
         OverWorldOreGeneration.generateOres();
     }
 }

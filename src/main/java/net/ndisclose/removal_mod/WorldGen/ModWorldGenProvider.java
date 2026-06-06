@@ -36,6 +36,15 @@ public class ModWorldGenProvider extends FabricDynamicRegistryProvider {
                 registries.lookupOrThrow(Registries.PLACED_FEATURE),
                 OverworldObtainableOres.OVERWORLD_NETHERITE_PLACED
         );
+        entries.add(
+                registries.lookupOrThrow(Registries.CONFIGURED_FEATURE),
+                OverworldObtainableOres.OVERWORLD_BASALT
+        );
+        entries.add(
+                registries.lookupOrThrow(Registries.PLACED_FEATURE),
+                OverworldObtainableOres.OVERWORLD_BASALT_PLACED
+        );
+
     }
     @Override
     public String getName() {

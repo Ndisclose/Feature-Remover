@@ -54,6 +54,26 @@ public class ModPlacedFeatures {
         );
 
 
+        Holder<ConfiguredFeature<?, ?>> overworldBasaltVeinNearLava =
+                context.lookup(Registries.CONFIGURED_FEATURE)
+                        .getOrThrow(
+                                OverworldObtainableOres.OVERWORLD_BASALT
+                        );
+
+        context.register(OverworldObtainableOres.OVERWORLD_BASALT_PLACED, new PlacedFeature(
+                        overworldBasaltVeinNearLava,
+                        List.of(
+                                CountPlacement.of(2),
+                                InSquarePlacement.spread(),
+                                HeightRangePlacement.uniform(
+                                        VerticalAnchor.absolute(-64),
+                                        VerticalAnchor.absolute(0)
+                                ),
+                                BiomeFilter.biome()
+                        )
+                )
+        );
+
 
     }
 }

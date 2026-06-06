@@ -4,6 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.ndisclose.removal_mod.RemovalMod;
 
@@ -41,5 +42,20 @@ public class OverworldObtainableOres {
                             "overworld_netherite_placed"
                     )
             );
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_BASALT =
+            ResourceKey.create(
+                    Registries.CONFIGURED_FEATURE,
+                    Identifier.fromNamespaceAndPath(
+                            RemovalMod.MOD_ID,
+                            "overworld_basalt"
+                    )
+            );
+    public static final ResourceKey<PlacedFeature> OVERWORLD_BASALT_PLACED =
+            ResourceKey.create(
+                    Registries.PLACED_FEATURE,
+                    Identifier.fromNamespaceAndPath(
+                            RemovalMod.MOD_ID,
+                            "overworld_basalt_placed"
+                    )
+            );
 }
