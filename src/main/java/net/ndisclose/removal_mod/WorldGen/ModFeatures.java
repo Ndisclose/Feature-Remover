@@ -6,6 +6,8 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.ndisclose.removal_mod.RemovalMod;
+import net.ndisclose.removal_mod.WorldGen.CustomFeatures.OverWorldLavaBasaltFeature;
+import net.ndisclose.removal_mod.WorldGen.CustomFeatures.OverWorldLushGlowstoneFeature;
 
 public class ModFeatures {
     public static void initialize() {
@@ -18,5 +20,14 @@ public class ModFeatures {
                             "lava_basalt"
                     ),
                     new OverWorldLavaBasaltFeature()
+            );
+    public static final Feature<NoneFeatureConfiguration> LUSH_GLOWSTONE =
+            Registry.register(
+                    BuiltInRegistries.FEATURE,
+                    Identifier.fromNamespaceAndPath(
+                            RemovalMod.MOD_ID,
+                            "lush_glowstone"
+                    ),
+                    new OverWorldLushGlowstoneFeature()
             );
 }

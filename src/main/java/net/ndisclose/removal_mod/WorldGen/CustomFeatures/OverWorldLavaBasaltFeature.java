@@ -1,4 +1,4 @@
-package net.ndisclose.removal_mod.WorldGen;
+package net.ndisclose.removal_mod.WorldGen.CustomFeatures;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.WorldGenLevel;
@@ -28,7 +28,6 @@ public class OverWorldLavaBasaltFeature extends Feature<NoneFeatureConfiguration
                     }
                 }
                 return true;
-            } else {
             }
         }
         return false;

@@ -44,6 +44,23 @@ public class ModWorldGenProvider extends FabricDynamicRegistryProvider {
                 registries.lookupOrThrow(Registries.PLACED_FEATURE),
                 OverworldObtainableOres.OVERWORLD_BASALT_PLACED
         );
+        entries.add(
+                registries.lookupOrThrow(Registries.CONFIGURED_FEATURE),
+                OverworldObtainableOres.OVERWORLD_BLACKSTONE
+        );
+        entries.add(
+                registries.lookupOrThrow(Registries.PLACED_FEATURE),
+                OverworldObtainableOres.OVERWORLD_BLACKSTONE_PLACED
+        );
+        entries.add(
+                registries.lookupOrThrow(Registries.CONFIGURED_FEATURE),
+                OverworldObtainableOres.OVERWORLD_GLOWSTONE
+        );
+        entries.add(
+                registries.lookupOrThrow(Registries.PLACED_FEATURE),
+                OverworldObtainableOres.OVERWORLD_GLOWSTONE_PLACED
+        );
+
 
     }
     @Override

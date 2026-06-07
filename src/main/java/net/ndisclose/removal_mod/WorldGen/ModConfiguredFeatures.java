@@ -23,6 +23,13 @@ public class ModConfiguredFeatures {
                 Blocks.ANCIENT_DEBRIS.defaultBlockState(),
                 3
                 );
+        OreConfiguration blackstoneConfig = new OreConfiguration(
+                new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES),
+                Blocks.BLACKSTONE.defaultBlockState(),
+                32
+        );
+        context.register(OverworldObtainableOres.OVERWORLD_GLOWSTONE, new ConfiguredFeature<>(ModFeatures.LUSH_GLOWSTONE, NoneFeatureConfiguration.INSTANCE));
+        context.register(OverworldObtainableOres.OVERWORLD_BLACKSTONE, new ConfiguredFeature<>(Feature.ORE, blackstoneConfig));
         context.register(OverworldObtainableOres.OVERWORLD_BASALT, new ConfiguredFeature<>(ModFeatures.LAVA_BASALT, NoneFeatureConfiguration.INSTANCE));
         context.register(OverworldObtainableOres.OVERWORLD_QUARTZ, new ConfiguredFeature<>(Feature.ORE, quartzConfig));
         context.register(OverworldObtainableOres.OVERWORLD_NETHERITE, new ConfiguredFeature<>(Feature.ORE, nethriteConfig));

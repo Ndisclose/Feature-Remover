@@ -46,7 +46,7 @@ public class ModPlacedFeatures {
                                 InSquarePlacement.spread(),
                                 HeightRangePlacement.uniform(
                                         VerticalAnchor.absolute(-64),
-                                        VerticalAnchor.absolute(-8)
+                                        VerticalAnchor.absolute(-14)
                                 ),
                                 BiomeFilter.biome()
                         )
@@ -74,6 +74,44 @@ public class ModPlacedFeatures {
                 )
         );
 
+        Holder<ConfiguredFeature<?, ?>> overworldBlackStoneVein =
+                context.lookup(Registries.CONFIGURED_FEATURE)
+                        .getOrThrow(
+                                OverworldObtainableOres.OVERWORLD_BLACKSTONE
+                        );
 
+        context.register(OverworldObtainableOres.OVERWORLD_BLACKSTONE_PLACED, new PlacedFeature(
+                        overworldBlackStoneVein,
+                        List.of(
+                                CountPlacement.of(4),
+                                InSquarePlacement.spread(),
+                                HeightRangePlacement.uniform(
+                                        VerticalAnchor.absolute(-64),
+                                        VerticalAnchor.absolute(0)
+                                ),
+                                BiomeFilter.biome()
+                        )
+                )
+        );
+
+        Holder<ConfiguredFeature<?, ?>> overworldGlowstoneVein =
+                context.lookup(Registries.CONFIGURED_FEATURE)
+                        .getOrThrow(
+                                OverworldObtainableOres.OVERWORLD_GLOWSTONE
+                        );
+
+        context.register(OverworldObtainableOres.OVERWORLD_GLOWSTONE_PLACED, new PlacedFeature(
+                overworldGlowstoneVein,
+                        List.of(
+                                CountPlacement.of(4),
+                                InSquarePlacement.spread(),
+                                HeightRangePlacement.uniform(
+                                        VerticalAnchor.absolute(-64),
+                                        VerticalAnchor.absolute(64)
+                                ),
+                                BiomeFilter.biome()
+                        )
+                )
+        );
     }
 }
