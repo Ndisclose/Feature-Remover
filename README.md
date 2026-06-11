@@ -1,9 +1,27 @@
-# Removal Mod
+# Feature Remover
 
-## Setup
+## Purpose
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+This mod contains a variety of useful features that allow users to:
+
+	- disable items
+	- disable mobs 
+	- disable blocks 
+	- disable biomes 
+	- disable structures
+	- disable world generation features
+
+by blacklist, and 
+
+	- disable Nether 
+
+by toggle.
+
+## How to use
+
+Simply go to the configuration file and fill out the blacklists with proper Minecraft IDs,
+typos will be ignored
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This mod is under the GNU General Public License v3 (GPL-3) (see LICENSE for full text).

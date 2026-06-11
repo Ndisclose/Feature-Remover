@@ -1,26 +1,24 @@
 {
 	"schemaVersion": 1,
-	"id": "removal-mod",
+	"id": "feature-remover",
 	"version": "${version}",
 	"name": "Removal Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A Minecraft Fabric mod that allows for the disabling of unwanted vanilla features.",
 	"authors": [
-		"Me!"
+		"Ndisclose"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://github.com/davidgoat7465-dot",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/removal-mod/icon.png",
+	"icon": "assets/feature-remover/Feature_Remover_Icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.ndisclose.removal_mod.RemovalMod"
+          "net.Ndisclose.feature_remover.FeatureRemover"
 		],
-		"fabric-datagen": [
-			"net.ndisclose.removal_mod.RemovalModDataGenerator"
-		]
+		"fabric-datagen": []
 	},
 	"mixins": [
 		"removal-mod.mixins.json"

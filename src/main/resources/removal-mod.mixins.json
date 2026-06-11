@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "net.ndisclose.removal_mod.mixin",
+	"package": "net.Ndisclose.feature_remover.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
         "CraftingMenuMixin",
