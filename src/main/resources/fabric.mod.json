@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "feature-remover",
-	"version": "0.01.1.26.1.2",
+	"version": "0.01.1.26.2",
 	"name": "Removal Mod",
 	"description": "A Minecraft Fabric mod that allows for the disabling of unwanted vanilla features.",
 	"authors": [
@@ -25,7 +25,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.2",
-		"minecraft": "~26.1.2",
+		"minecraft": "~26.2",
 		"java": ">=25",
 		"fabric-api": "*"
 	}
